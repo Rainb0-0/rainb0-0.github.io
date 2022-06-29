@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function action(){
+            if (!(document.getElementById("input").value.includes(" "))){
+                alert("your text does not contain any spaces");
+            }
+            else{
+                let inputRaw = document.getElementById("input").value;
+                let input = inputRaw.replace(" ", " ‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌");
+                navigator.clipboard.writeText(input);
+                console.log(" ");
+                alert("The output was copied to your clipboard");
+            }
+        };
+    </script>
+    <title>AICTYT</title>
+</head>
+<body>
+    <h1>AICTYT</h1>
+    <div class="main">
+        <h5 class="text" id="text">Add your text</h5>
+        <textarea class="input" id="input"></textarea>
+        <button class="button" id="button" onclick="action()">Ok</button>
+    </div>
+</body>
+</html>
